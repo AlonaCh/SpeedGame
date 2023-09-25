@@ -1,0 +1,38 @@
+body {
+    background: url(themeGame1.jpg);
+    background-size: cover;
+    color: rgb(85, 57, 5);
+    font-family: 'Tourney', cursive;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+h1 {
+    font-size: 40px;
+}
+
+p {
+  font-size: 2rem;
+}
+button {
+    background-color: rgb(245, 245, 193);
+    border: none;
+    padding: 6rem;
+    margin: 2rem;
+    border-radius: 50%;
+
+}
+.buttonsToPlay {
+    display: flex;
+}
+.start {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: rgb(85, 57, 5);
+}
