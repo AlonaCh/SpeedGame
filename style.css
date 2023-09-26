@@ -1,8 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background: url(themeGame1.jpg);
     background-size: cover;
     color: rgb(85, 57, 5);
-    font-family: 'Tourney', cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 .container {
     display: flex;
@@ -14,25 +19,41 @@ body {
 }
 h1 {
     font-size: 40px;
+    font-family: 'Tourney', cursive;
 }
 
 p {
   font-size: 2rem;
 }
-button {
-    background-color: rgb(245, 245, 193);
-    border: none;
-    padding: 6rem;
-    margin: 2rem;
-    border-radius: 50%;
-
-}
-.buttonsToPlay {
+.circles {
     display: flex;
+    flex-wrap: wrap;
 }
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(245, 245, 193);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    pointer-events: none;
+}
+
 .start {
     padding: 1rem;
     border-radius: 5px;
     font-size: 1.5rem;
     color: rgb(85, 57, 5);
+}
+.end {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: rgb(85, 57, 5); 
+}
+.circle.active { /* if the circle elemnt has class active, be tomato color*/
+    background-color: tomato;
+    background-image: url(themeGame.jpg);
 }
