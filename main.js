@@ -6,6 +6,7 @@ const scoreDisplay = document.querySelector(".score");
 const overlay = document.querySelector(".overlayModal");
 const closeButton = document.querySelector(".close");
 const scoreModal = document.querySelector('#scoreModal');
+const message = document.querySelector('#message');
 
 //global variables
 let score = 0; // to store our scores
@@ -27,6 +28,16 @@ const clickCircle = (i) => {
   rounds--; // to be able to make more clicks than 3
   score += 10;
   scoreDisplay.textContent = score;
+  if (score < 30) {
+    message.textContent = "Do not give up!"
+  }
+  else if (score >= 30 && score < 70) {
+    message.textContent = "Super! Move on!"
+  } else if (score >= 70 && score < 120) {
+    message.textContent = "You are super fast!"
+  } else {
+    message.textContent = "You are faster than hares!"
+  }
 };
 // classList.add(endgame)
 // classList.remove(endgame)
@@ -48,13 +59,11 @@ function startGame() {
     //if we start a game and do not click more than 3 times game ends
     return endGame();
   }
-
   enableEvents();
 
-  const newActive = pickNew(active); //gives a number and pass to function pickNew(active)
+  const newActive = pickNew(active); //to store a new random number. It get the result from the function pickNew. (gives a number and pass to function pickNew(active))
   circles[newActive].classList.toggle("active");
-  circles[active].classList.remove("active");
-
+circles[active].classList.remove("active");
   active = newActive; // overwrite with a new number
   timer = setTimeout(startGame, pace);
 
@@ -67,7 +76,7 @@ function startGame() {
     if (newActive !== active) {
       return newActive;
     }
-    return pickNew(active); // to loop until it is same
+    return pickNew(active); // to loop until it is newActive === active
   }
   console.log(active);
 }
