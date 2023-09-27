@@ -28,6 +28,7 @@ p {
 .circles {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .circle {
     width: 70px;
@@ -40,7 +41,26 @@ p {
     margin: 1rem;
     pointer-events: none;
 }
-
+#circle1.active {
+    background-color: tomato;
+    background-image: url(image1.jpg);
+    background-size: cover;
+}
+#circle2.active {
+    background-color: tomato;
+    background-image: url(themeGame.jpg);
+    background-size: cover;
+}
+#circle3.active {
+    background-color: tomato;
+    background-image: url(themeGame.jpg);
+    background-size: cover;
+}
+#circle4.active {
+    background-color: tomato;
+    background-image: url(themeGame.jpg);
+    background-size: cover;
+}
 .start {
     padding: 1rem;
     border-radius: 5px;
@@ -53,7 +73,43 @@ p {
     font-size: 1.5rem;
     color: rgb(85, 57, 5); 
 }
-.circle.active { /* if the circle elemnt has class active, be tomato color*/
+/*.circle.active { /* if the circle elemnt has class active, be tomato color
     background-color: tomato;
     background-image: url(themeGame.jpg);
+    background-size: cover;
+} */
+.overlayModal {
+    display: none; 
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* view port high */
+    background-color: rgba(0, 0, 0, 0.4); /* Fallback color */
+    justify-content: center;
+    align-items: center;
+  }
+  .overlayModal.visible {
+    display: flex;
+  }
+  .modal {
+    background-color: white;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 600px;
+    position: relative;
+    text-align: center;
+}
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
 }
