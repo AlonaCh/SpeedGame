@@ -11,7 +11,7 @@ const message = document.querySelector('#message');
 //global variables
 let score = 0; // to store our scores
 let timer;
-let pace = 1000; //miliseconds
+let pace = 1200; //miliseconds
 let active = 0;
 let rounds = 0;
 
@@ -55,6 +55,7 @@ const enableEvents = () => {
 
 // it waits for a second and them a new number will be showed. And do it again.
 function startGame() {
+  soundGame.play();
   if (rounds >= 3) {
     //if we start a game and do not click more than 3 times game ends
     return endGame();
@@ -66,7 +67,6 @@ function startGame() {
 circles[active].classList.remove("active");
   active = newActive; // overwrite with a new number
   timer = setTimeout(startGame, pace);
-
   pace -= 10;
   rounds++;
   function pickNew(active) {
@@ -83,6 +83,8 @@ circles[active].classList.remove("active");
 
 // end game
 function endGame() {
+  soundGame.pause();
+  gameOverSound.play();
   console.log("end");
   clearTimeout(timer);
   modalShow();
@@ -102,3 +104,9 @@ const modalShow = () => {
 startPlay.addEventListener("click", startGame);
 endPlay.addEventListener("click", endGame);
 closeButton.addEventListener("click", resetGame);
+
+const soundGame = new Audio();
+soundGame.src = 'running.mp3';
+
+const gameOverSound = new Audio();
+gameOverSound.src = 'gameOver.mp3';

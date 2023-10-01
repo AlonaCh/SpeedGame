@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 body {
-    background: url(themeGame1.jpg);
+    background: url(backpic.jpg);
     background-size: cover;
     color: rgb(85, 57, 5);
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Tourney', cursive;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -17,13 +18,16 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
 h1 {
-    font-size: 40px;
-    font-family: 'Tourney', cursive;
+    font-size: 80px;
+}
+h3 {
+    font-size: 50px;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 30px;
 }
 .circles {
     display: flex;
@@ -31,9 +35,9 @@ p {
     justify-content: center;
 }
 .circle {
-    width: 70px;
-    height: 70px;
-    background-color: rgb(245, 245, 193);
+    width: 250px;
+    height: 250px;
+    background-color: #b3a043;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -42,37 +46,22 @@ p {
     pointer-events: none;
 }
 #circle1.active {
-    background-color: tomato;
-    background-image: url(image1.jpg);
+    background-image: url(hare1.jpg);
     background-size: cover;
 }
 #circle2.active {
-    background-color: tomato;
-    background-image: url(themeGame.jpg);
+    background-image: url(hare4.jpg);
     background-size: cover;
 }
 #circle3.active {
-    background-color: tomato;
-    background-image: url(themeGame.jpg);
+    background-image: url(hare6.jpg);
     background-size: cover;
 }
 #circle4.active {
-    background-color: tomato;
-    background-image: url(themeGame.jpg);
+    background-image: url(hare.jpg);
     background-size: cover;
 }
-.start {
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    color: rgb(85, 57, 5);
-}
-.end {
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    color: rgb(85, 57, 5); 
-}
+
 /*.circle.active { /* if the circle elemnt has class active, be tomato color
     background-color: tomato;
     background-image: url(themeGame.jpg);
@@ -112,4 +101,21 @@ p {
 .close:focus {
     color: black;
     cursor: pointer;
+}
+.start,
+.end {
+    padding: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid green;
+    font-size: 14px;
+    color: rgb(85, 57, 5);
+    opacity: 0.7;
+   
+}
+.start:hover,
+.end:hover {
+    background-color: rgb(235, 217, 21);
+    opacity: unset;
 }
