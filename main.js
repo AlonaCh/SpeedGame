@@ -55,6 +55,8 @@ const enableEvents = () => {
 
 // it waits for a second and them a new number will be showed. And do it again.
 function startGame() {
+  startPlay.classList.add("none");
+  endPlay.classList.remove("none");
   soundGame.play();
   if (rounds >= 3) {
     //if we start a game and do not click more than 3 times game ends
@@ -99,6 +101,15 @@ const resetGame = () => {
 const modalShow = () => {
     overlay.classList.toggle("visible"); //Toggles between tokens in the list
     scoreModal.textContent = score;
+    if (score <= 40) {
+      scoreModal.textContent = `${score}. Hares are faster than you!`
+    } else if (score >= 50 && score < 70) {
+      scoreModal.textContent = `${score}. Speed up next time!`
+    } else if (score >= 70 && score < 100) {
+      scoreModal.textContent = `${score}. You are super fast!` 
+  } else {
+    scoreModal.textContent = `${score}. You are a rocket!`
+  }
 };
 
 startPlay.addEventListener("click", startGame);

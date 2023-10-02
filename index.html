@@ -16,14 +16,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Speedgame</title>
+    <title>Catch game</title>
   </head>
   <body>
     <div class="container">
       <div class="overlayModal">
         <div class="modal">
           <h2>Game over!</h2>
-          <p>Your score is: <span id="scoreModal"></span></p>
+          <p>Your score is: <span id="scoreModal"></span>🐇</p>
           <button class="close">
             <span class="material-symbols-outlined">close </span>
           </button>
@@ -31,7 +31,7 @@
       </div>
 
       <h1>CATCH ME</h1>
-      <h3>Score:<span class="score">0</span></h3>
+      <h3>Score: <span class="score">0</span></h3>
       <p id="message"></p>
 
       <div class="circles">
@@ -41,7 +41,7 @@
         <div class="circle" id="circle4"></div>
       </div>
       <button id="startButton" class="start">START</button>
-      <button id="endButton" class="end">STOP THIS</button>
+      <button id="endButton" class="end none">STOP THIS</button>
     </div>
     <script src="main.js"></script>
   </body>

@@ -21,13 +21,18 @@ body {
 
 h1 {
     font-size: 80px;
+    text-shadow: 2px 2px #536004;
+}
+h2 {
+    font-size: 40px;
 }
 h3 {
     font-size: 50px;
 }
-
 p {
   font-size: 30px;
+  font-family: 'Changa', sans-serif;
+  margin-top: 15px;
 }
 .circles {
     display: flex;
@@ -39,6 +44,8 @@ p {
     height: 250px;
     background-color: #b3a043;
     border-radius: 50%;
+    border-top-style: dotted;
+    box-shadow: 3px 3px 1px 3px #553906;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,12 +68,6 @@ p {
     background-image: url(hare.jpg);
     background-size: cover;
 }
-
-/*.circle.active { /* if the circle elemnt has class active, be tomato color
-    background-color: tomato;
-    background-image: url(themeGame.jpg);
-    background-size: cover;
-} */
 .overlayModal {
     display: none; 
     position: fixed; /* Stay in place */
@@ -82,17 +83,21 @@ p {
     display: flex;
   }
   .modal {
-    background-color: white;
+    background-color:#E5CEB8;
     margin: 2rem;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 5px;
-    border: 1px solid #888;
+    border: 1px solid #553906;
+    border-radius: 13px;
     width: 600px;
     position: relative;
     text-align: center;
 }
 .close {
-    color: #aaa;
+    color: #E5CEB8;
+    border-radius: 20px;
+    border: 1px solid #553906;
+    padding: 5px;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -103,19 +108,31 @@ p {
     cursor: pointer;
 }
 .start,
-.end {
-    padding: 15px;
-    padding: 15px;
+.end
+{
+    padding: 20px 40px;
     margin-top: 10px;
     border-radius: 10px;
-    border: 1px solid green;
-    font-size: 14px;
+    border: 1px solid #553906;
+    font-size: 20px;
+    font-weight: bolder;
     color: rgb(85, 57, 5);
+    background-color: #B3A043;
     opacity: 0.7;
-   
 }
 .start:hover,
 .end:hover {
-    background-color: rgb(235, 217, 21);
+    background-color: #A0A503;
     opacity: unset;
+}
+.none {
+    display: none;
+}
+#message {
+    font-size: 40px;
+    margin-top: 10px;
+    font-family: 'Tourney', cursive;
+}
+.score {
+   margin-top: 20px; 
 }
