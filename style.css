@@ -136,3 +136,8 @@ p {
 .score {
    margin-top: 20px; 
 }
+.footer
+ {
+    font-size: 25px;
+    color: black;
+}
